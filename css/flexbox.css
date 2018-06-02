@@ -1,4 +1,26 @@
-/* ================================= 
+/* =================================
+  Base Styles
+==================================== */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*
+This works also for making a sticky footer
+.row {
+  flex: 1;
+}
+*/
+
+.main-footer {
+  margin-top: auto;
+}
+
+
+/* =================================
   Media Queries
 ==================================== */
 
