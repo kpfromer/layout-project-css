@@ -15,10 +15,14 @@
     align-items: center;
   }
 
+  .row {
+    flex-wrap: wrap;
+  }
+
   .col {
-    flex: 1; /* Short hand for the following */
+    flex: 1 50%; /* Short hand for the following */
     /*flex-grow: 1;*/
-    /*flex-basis: 0;*/
+    /*flex-basis: 50%;*/
     /*flex-shrink: 0;*/
   }
 
@@ -31,8 +35,16 @@
     justify-content: space-between;
   }
 
+  .col {
+    flex-basis: 0; /* puts the columns all on one line */
+  }
+
   .primary {
-    flex: 2;
+    flex-grow: 1.4;
+  }
+
+  .secondary {
+    order: -1;
   }
 
 }
