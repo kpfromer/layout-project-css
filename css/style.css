@@ -44,11 +44,18 @@ img {
 
 .name {
 	font-size: 1.25em;
+	margin: 0;
+}
+
+.main-nav {
+	margin-top: 5px;
 }
 
 .name a,
 .main-nav a {
 	text-align: center;
+	display: block;
+	padding: 10px 15px;
 }
 
 .main-nav a {
@@ -63,9 +70,35 @@ img {
 
 /* ---- Layout Containers ---- */
 
+.container {
+	padding: 0 1em;
+}
+
+.headline {
+	margin-bottom: 0;
+}
+
+.banner,
+.main-footer {
+	text-align: center;
+}
+
 .banner {
 	color: #fff;
 	background: #3acec2;
+	padding: 2em 0;
+}
+
+.main-header {
+	padding: .75em 0;
+}
+
+.main-content {
+	padding-top: 2.75em;
+}
+
+.col {
+	padding: 0 1em;
 }
 
 .main-footer {
@@ -86,7 +119,29 @@ img {
 
 @media (min-width: 769px) {
 
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
 
+	.name,
+	.main-nav li {
+		float: left;
+	}
+
+	.main-nav {
+		float: right;
+	}
+
+	.col {
+		float: left;
+		padding-right: 1em;
+	}
+
+	.primary,
+	.secondary {
+		width: 50%;
+	}
 
 	/* ---- Float clearfix ---- */
 
@@ -96,4 +151,24 @@ img {
 		clear: both;
 	}
 
+}
+
+@media (min-width: 1125px) {
+
+	.container {
+		max-width: 1150px;
+	}
+
+	.col + .col {
+		padding-left: 1.5em;
+	}
+
+	.primary {
+		width: 40%;
+	}
+
+	.secondary,
+	.tertiary {
+		width: 30%;
+	}
 }
