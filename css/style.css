@@ -5,121 +5,85 @@
 * {
 	box-sizing: border-box;
 }
-
 body {
 	font-family: 'Varela Round', sans-serif;
 	line-height: 1.6;
 	color: #3a3a3a;
+	margin: 0;
 }
-
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 p {
 	font-size: .95em;
 	margin-bottom: 1.8em;
 }
-
 h2,
 h3,
 a {
 	color: #093a58;
 }
-
 h2,
 h3 {
 	margin-top: 0;
 }
-
 a {
 	text-decoration: none;
 }
-
 img {
 	max-width: 100%;
 }
 
-figure {
-	margin: 0;
-	line-height: 0;
-
-	position: relative;
-}
-
-figcaption {
-	font-size: .9em;
-	line-height: 1.5;
-	color: #fff;
-	padding: 1em;
-	background: rgba(19,43,102, .85);
-
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
-
-/* ================================= 
+/* =================================
   Base Layout Styles
 ==================================== */
 
 /* ---- Navigation ---- */
 
 .name {
-	font-size: 1.25em;
+	font-size: 1.35em;
 	margin: 0;
 }
-
 .main-nav {
 	margin-top: 5px;
 }
-
 .name a,
 .main-nav a {
 	text-align: center;
 	display: block;
 	padding: 10px 15px;
 }
-
 .main-nav a {
 	font-size: .95em;
 	color: #3acec2;
 	text-transform: uppercase;
 }
-
 .main-nav a:hover {
 	color: #093a58;
 }
 
 /* ---- Layout Containers ---- */
 
-.container {
-	padding: 0 1em;
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
 }
-
-.headline {
-	margin-bottom: 0;
-}
-
 .banner,
 .main-footer {
 	text-align: center;
 }
-
 .banner {
 	color: #fff;
 	background: #3acec2;
-	padding: 2em 0;
+	padding: 3.2em 0;
+	margin-bottom: 48px;
 }
-
-.main-header {
-	padding: .75em 0;
-}
-
-.main-content {
-	padding-top: 2.75em;
-}
-
 .col {
-	padding: 0 1em;
+	padding-right: 1em;
+	padding-left: 1em;
 }
-
 .main-footer {
 	background: #d9e4ea;
 	padding: 2em 0;
@@ -131,84 +95,31 @@ figcaption {
 .logo {
 	width: 190px;
 }
-
-.icon-location {
-	width: 30px;
-
-	position: absolute;
-	top: -15px;
-	left: -15px;
+.headline {
+	margin-bottom: 0;
+}
+.feat-img {
+	border-radius: 5px;
 }
 
-/* ================================= 
+/* =================================
   Media Queries
 ==================================== */
 
 @media (min-width: 769px) {
-
-	body {
-		padding-top: 68px; /* 68px comes from the height of the header- stops the header from covering the content */
-	}
-
-	.main-header {
-		position: fixed;
-		background: #fff;
-		box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
-		width: 100%; /* width is need here because the fixed position shrinks width to match content width */
-		top: 0;
-		z-index: 1000;
-	}
-
-	.container {
+	.main-header,
+	.row {
 		width: 90%;
 		margin: 0 auto;
 	}
-
-	.name,
-	.main-nav li {
-		float: left;
+	.tagline {
+		font-size: 1.4em;
 	}
-
-	.main-nav {
-		float: right;
-	}
-
-	.col {
-		float: left;
-		padding-right: 1em;
-	}
-
-	.primary,
-	.secondary {
-		width: 50%;
-	}
-
-	/* ---- Float clearfix ---- */
-
-	.clearfix::after {
-		content: " ";
-		display: table;
-		clear: both;
-	}
-
 }
-
-@media (min-width: 1125px) {
-
-	.container {
+@media (min-width: 1025px) {
+	.main-header,
+	.row {
+		width: 80%;
 		max-width: 1150px;
-	}
-
-	.col + .col {
-		padding-left: 1.5em;
-	}
-
-	.primary {
-		width: 40%;
-	}
-
-	.secondary,
-	.tertiary {
-		width: 30%;
 	}
 }
